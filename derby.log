@@ -1,20 +1,7 @@
 ----------------------------------------------------------------
-Sat Apr 11 12:33:12 GMT-03:00 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-69df-939c-00000db05cc0 
+Sun Apr 12 16:52:23 GMT-03:00 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0171-6ff3-38f6-00000d3fb1c0 
 on database directory C:\Users\Victo\Desktop\POO2\POO2_AC1_A2\ac1_a2\dbfuncionario with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
-Loaded from file:/C:/Users/Victo/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_241-b07
-user.dir=c:\Users\Victo\Desktop\POO2\POO2_AC1_A2\ac1_a2
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Sat Apr 11 12:35:19 GMT-03:00 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 9a4840c2-0171-69df-939c-00000db05cc0 
-on database directory C:\Users\Victo\Desktop\POO2\POO2_AC1_A2\ac1_a2\test with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
 Loaded from file:/C:/Users/Victo/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_241-b07

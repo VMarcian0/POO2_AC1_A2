@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+</head>
+<body>
+    <table>
+    <h1>Novo Funcionario</h1>
+        <form th:action="@{/Funcionario}" method="POST">
+            <text>Nome</text>
+            <input type = "text" name ="nome">
+            <text>Cargo</text>
+            <input type = "text" name ="cargo">
+            <text>Departamento</text>
+            <input type = "text" name ="departamento">
+            <text>Salario</text>
+            <input type = "number" step="0.01" name ="salario">
+            <text>CPF</text>
+            <input type = "number" name ="cpf">
+            <input type="submit" value="Funcionario">
+        </form>
+    </table>
+    <table>
+    <l>Funcionarios</l>
+        <tr th:each="funcionario: ${Funcionarios}">
+            <td th:text="${funcionario?.getCpf()}"/>
+            <td th:text="${funcionario?.getNome()}"/>
+            <td th:text="${funcionario?.getCargo()}"/>
+            <td th:text="${funcionario?.getDepartamento()}"/>
+            <td th:text="${funcionario?.getSalario()}"/>
+        </tr>
+    </table>
+</body>
+</html>
