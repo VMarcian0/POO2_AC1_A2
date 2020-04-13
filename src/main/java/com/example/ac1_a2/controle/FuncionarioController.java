@@ -31,24 +31,11 @@ public class FuncionarioController {
     }
 
     //tenta adicionar um funcionario e atualiza a lista de funcionarios cadastrados 
-    @PostMapping("/funcionarios")
-    public ModelAndView funcionarioAddForm(@ModelAttribute Funcionario Funcionario)
+    @PostMapping("/salvar")
+    public String funcionarioAddForm(@ModelAttribute Funcionario Funcionario)
     {
-        ModelAndView mv = new ModelAndView("funcionarios");
-        mv.addObject("Funcionario", Funcionario);
-        try
-        {
-            service.insertFuncionario(Funcionario);
-        }
-        catch(Exception e)
-        {
-           return mv; 
-        }
-        finally
-        {
-            mv.addObject("Funcionarios", service.getFuncionarios());
-        }
-        return mv;
+        service.insertFuncionario(Funcionario);
+        return "redirect:/funcionarios"; //executa uma nova requesição "/funcionarios"
     }
 
 }

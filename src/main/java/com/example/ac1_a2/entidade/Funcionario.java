@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -12,10 +14,39 @@ public class Funcionario implements Serializable {
      *
      */
     private static final long serialVersionUID = 1L;
+    //
+    // Preciso alterar o métodod da chave primária:
+    // Mudar para ser um número de registro geral
+    // Validação de CPF é muito complexa
+    //
     // <>atributos<>
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int registro;
     private int cpf;
     // cpf is primaty key
+
+    public Funcionario(int registro, int cpf, String nome, String cargo, String departamento, Float salario) {
+        this.registro = registro;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.departamento = departamento;
+        this.salario = salario;
+    }
+
+    public int getRegistro() {
+        return this.registro;
+    }
+
+    public void setRegistro(int registro) {
+        this.registro = registro;
+    }
+
+    public Funcionario registro(int registro) {
+        this.registro = registro;
+        return this;
+    }
     private String nome;
     private String cargo;
     private String departamento;
@@ -23,14 +54,6 @@ public class Funcionario implements Serializable {
     // <\>atributos<\>
 
     public Funcionario() {
-    }
-
-    public Funcionario(int cpf, String nome, String cargo, String departamento, Float salario) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.cargo = cargo;
-        this.departamento = departamento;
-        this.salario = salario;
     }
 
     public int getCpf() {
