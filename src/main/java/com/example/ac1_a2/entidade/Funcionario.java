@@ -24,6 +24,11 @@ public class Funcionario implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int registro;
     private int cpf;
+    private String nome;
+    private String cargo;
+    private String departamento;
+    private Float salario;
+    // <\>atributos<\>
     // cpf is primaty key
 
     public Funcionario(int registro, int cpf, String nome, String cargo, String departamento, Float salario) {
@@ -47,14 +52,10 @@ public class Funcionario implements Serializable {
         this.registro = registro;
         return this;
     }
-    private String nome;
-    private String cargo;
-    private String departamento;
-    private Float salario;
-    // <\>atributos<\>
 
     public Funcionario() {
     }
+
 
     public int getCpf() {
         return this.cpf;

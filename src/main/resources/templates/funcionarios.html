@@ -8,7 +8,7 @@
 <body>
     <table>
         <form th:action="@{/salvar}" method="POST">
-            <h1>Novo Funcionario</h1>
+            <h2>Novo Funcionario</h2>
             <text>Nome</text>
             <input type = "text" name ="Nome">
             <text>Cargo</text>
@@ -23,14 +23,33 @@
         </form>
     </table>
     <table>
-    <l>Funcionarios</l>
+    <h1>Quadro de Funcionarios</h1>
+        <tr>
+            <th>Registro</th>
+            <td />
+            <th>CPF</th>
+            <td />
+            <th>Nome</th>
+            <td />
+            <th>Cargo</th>
+            <td />
+            <th>Departamento</th>
+            <td />
+            <th>Salario</th>
+        </tr>
         <tr th:each="funcionario: ${Funcionarios}">
             <td th:text="${funcionario?.getRegistro()}">
+            <td />
             <td th:text="${funcionario?.getCpf()}"/>
+            <td />
             <td th:text="${funcionario?.getNome()}"/>
+            <td />
             <td th:text="${funcionario?.getCargo()}"/>
+            <td />
             <td th:text="${funcionario?.getDepartamento()}"/>
+            <td />
             <td th:text="${funcionario?.getSalario()}"/>
+            <td />
         </tr>
     </table>
 </body>
